@@ -15,7 +15,6 @@ export const GET = auth(async (request) => {
         body,
         request,
         onBeforeGenerateToken: async (
-          pathname,
         ) => {   
           return {
             allowedContentTypes: ['image/jpeg', 'image/png', 'image/gif'],
