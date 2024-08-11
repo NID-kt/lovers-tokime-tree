@@ -1,8 +1,10 @@
 "use server"
 import {sql} from "@vercel/postgres";
 
-export default function getMemory({userID}:{userID: string}){
-    return sql`
+import type { Tree } from "./page"
+
+export async function getMemory({userID}:{userID: string}){
+    return sql<Tree>`
         SELECT * FROM memories
         WHERE userID = ${userID}
     `;
