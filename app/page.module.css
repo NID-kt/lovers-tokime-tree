@@ -19,7 +19,7 @@
   color: white;
   margin-bottom: 20px;
   margin-top: -100px;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 1px 1px 1px rgba(36, 104, 136, 0.651);
 }
 
 .h1 {
@@ -39,7 +39,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 0.5rem;
@@ -60,7 +60,7 @@
 }
 .button {
     width: 100%;
-    background-color: rgba(97, 221, 243, 0.356); /* 通常時の青色 */
+    background-color: rgba(97, 221, 243, 0.459); /* 通常時の青色 */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
@@ -68,7 +68,7 @@
     color: white;
     text-align: center;
     cursor: pointer;
-    text-shadow: 1px 1px 1px rgba(79, 142, 184, 0.6);
+    text-shadow: 1px 1px 1px rgba(79, 142, 184, 0.5);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     font-family: 'AomemoFont', sans-serif;
     font-weight: bold;
