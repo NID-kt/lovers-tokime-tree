@@ -60,7 +60,7 @@
 }
 .button {
     width: 100%;
-    background-color: rgba(88, 201, 221, 0.452); /* 通常時の青色 */
+    background-color: rgba(97, 221, 243, 0.356); /* 通常時の青色 */
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 0.75rem;
     padding: 0.625rem 1.25rem;
@@ -68,7 +68,7 @@
     color: white;
     text-align: center;
     cursor: pointer;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px 1px 1px rgba(79, 142, 184, 0.6);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     font-family: 'AomemoFont', sans-serif;
     font-weight: bold;
@@ -86,5 +86,47 @@
     font-family: 'AomemoFont', sans-serif;
     font-size: 1rem; /* 少し小さめのサイズでエレガントに */
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* エラーメッセージの影効果 */
+  }
+  
+  /* スマホ向けのスタイル */
+  @media (max-width: 768px) {
+    .main {
+      padding-top: 50px; /* スマホ向けにトップのパディングを減らす */
+      background-size: cover; /* 背景画像をカバー表示にする */
+    }
+  
+    .title {
+      margin-top: -50px; /* スマホ向けにマージンを調整 */
+    }
+  
+    .h1 {
+      font-size: 2.5rem; /* スマホ向けにフォントサイズを小さくする */
+      letter-spacing: 0.5rem; /* スマホ向けに文字間隔を狭くする */
+    }
+  
+    .h2 {
+      font-size: 1rem; /* フォントサイズを小さく */
+      letter-spacing: 0.25rem; /* 文字間隔を狭く */
+      margin-bottom: 30px;
+    }
+  
+    .loginContainer {
+      width: 90%; /* 幅を固定せず、親要素の90%に調整 */
+      padding: 1.5rem; /* パディングを少し減らす */
+    }
+  
+    .input {
+      font-size: 1rem; /* フォントサイズを小さく */
+      padding: 0.5rem; /* パディングを少し減らす */
+    }
+  
+    .button {
+      font-size: 1.125rem; /* フォントサイズを調整 */
+      padding: 0.5rem 1rem; /* パディングを調整 */
+    }
+  
+    .error {
+      font-size: 0.875rem; /* エラーメッセージのフォントサイズを小さく */
+    }
   }
   
