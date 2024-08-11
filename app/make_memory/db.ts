@@ -1,8 +1,6 @@
 "use server"
 import { sql } from "@vercel/postgres";
 
-
-
 export async function addMemory({ userID, date, place, mood, text} : { userID: string, date: string, place: string, mood: string, text: string })
 {
     return sql`

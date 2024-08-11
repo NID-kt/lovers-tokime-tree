@@ -1,14 +1,15 @@
 'use client'
 
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react"
-import { type PutBlobResult } from '@vercel/blob';
 import { upload } from '@vercel/blob/client';
-
 import { auth } from "@/auth";
 import { addMemory } from "./db";
 
 export default function MakeMemory() {
+
+    const router = useRouter();
 
     const moods = [
         { name: "bergamot", imageUrl: "/images/fruit_bergamot_yellow.png" },
@@ -20,7 +21,7 @@ export default function MakeMemory() {
 
     type MoodName = typeof moods[number]['name'];
 
-    const [selectMood, setSelectMood] = useState<number>(0)
+    const [selectMood, setSelectMood] = useState<number>(0);
     const [mood, setMood] = useState<MoodName>(moods[selectMood].name); //感情
     const [date, setDate] = useState(new Date().toISOString()); //日付
     const [place, setPlace] = useState(''); //場所
@@ -43,32 +44,32 @@ export default function MakeMemory() {
         }
     }
 
-    const handleSave = () => {
+    const handleSave = async () => {
         const userID = session?.user?.id;
         if (!userID) {
             return;
         }
 
-        addMemory({ userID, date, place, mood, text })
+        await addMemory({ userID, date, place, mood, text })
+        router.back();
     }
 
     return (
         <div
-            className="min-h-screen flex items-center justify-center bg-cover bg-center p-6"
+            className="min-h-screen flex items-center justify-center bg-cover bg-center p-0"
             style={{ backgroundImage: `url(/images/leaf_back.png)`, backgroundSize: 'contain' }}>
-            <div className="absolute bg-white p-10 rounded-lg shadow-lg max-w-lg w-full">
-                <h1 className="text-3xl font-bold mb-6 text-center">新しい思い出を果実にしよう!!</h1>
-                <div className="">
-                    <h2 className="text-xl font-bold text-center">果実を選ぶ</h2>
-                    <div className="mb-6 grid grid-cols-3 gap-4">
+            <div className="relative bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+                <h1 className="text-3xl font-bold mb-4 text-center">新しい思い出を果実にしよう!!</h1>
+                <div>
+                    <h2 className="text-xl font-bold text-center mb-4">果実を選ぶ</h2>
+                    <div className="grid grid-cols-3 gap-4 mb-6">
                         {moods.map((item, index) => (
                             <div
                                 key={index}
                                 onClick={() => {
                                     setMood(item.name)
                                     setSelectMood(index)
-                                }
-                                }
+                                }}
                                 className={`cursor-pointer border-2 rounded-md p-2 ${selectMood === index ? 'border-indigo-500' : 'border-gray-300'}`}
                             >
                                 <img
@@ -80,24 +81,7 @@ export default function MakeMemory() {
                             </div>
                         ))}
                     </div>
-
                 </div>
-
-                {/* <div className="mb-6 grid grid-cols-2 gap-4">
-                    {images.length > 0 ? (
-                        images.map((image, index) => (
-                            <img
-                                key={index}
-                                src={image}
-                                alt={`画像${index}`}
-                                className="w-32 h-32 object-cover rounded-md shadow-md"
-                            />
-                        ))) : (
-                        <div className="col-span-2 text-center text-gray-300">
-                            画像
-                        </div>
-                    )}
-                </div> */}
 
                 <form className="space-y-4">
                     <div>
