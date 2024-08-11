@@ -1,0 +1,90 @@
+.main {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.875rem; /* 30px */
+  letter-spacing: 0.15em;
+  background-image: url('/images/background.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: 'AomemoFont', sans-serif;
+  padding-top: 100px;
+}
+
+.title {
+  color: white;
+  margin-bottom: 20px;
+  margin-top: -100px;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+.h1 {
+  font-size: 4.375rem; /* 70px */
+  font-weight: bold;
+  letter-spacing: 0.9375rem; /* 15px */
+}
+
+.h2 {
+  font-size: 1.125rem; /* 18px */
+  font-weight: normal;
+  letter-spacing: 0.5rem; /* 8px */
+  margin-bottom: 50px;
+}
+
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 18.75rem; /* 300px */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+  width: 100%;
+  font-family: 'AomemoFont', sans-serif;
+  font-size: 1.125rem; /* 18px */
+  padding: 0.625rem; /* 10px */
+  border-radius: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  margin-bottom: 1rem; /* 16px */
+}
+.button {
+    width: 100%;
+    background-color: rgba(88, 201, 221, 0.452); /* 通常時の青色 */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 0.75rem;
+    padding: 0.625rem 1.25rem;
+    font-size: 1.25rem; /* 20px */
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'AomemoFont', sans-serif;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: rgba(70, 130, 180, 0.8); /* ホバー時のスタイリッシュなスチールブルー */
+    box-shadow: 0 4px 15px rgba(70, 130, 180, 0.5); /* ホバー時の影効果 */
+  }
+  
+  .error {
+    margin-top: 1rem; /* 16px */
+    color: #e57373; /* エラーメッセージのより洗練された薄い赤色 */
+    font-family: 'AomemoFont', sans-serif;
+    font-size: 1rem; /* 少し小さめのサイズでエレガントに */
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3); /* エラーメッセージの影効果 */
+  }
+  
