@@ -38,7 +38,7 @@ export default function ViewLostTree() {
     }, [session]);
 
     const handleClick = () => {
-        router.back();
+        router.push("../")
     }
 
     return (

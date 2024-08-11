@@ -51,7 +51,7 @@ export default function MakeMemory() {
         }
 
         await addMemory({ userID, date, place, mood, text })
-        router.back();
+        router.push("../")
     }
 
     return (
