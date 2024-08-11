@@ -1,0 +1,80 @@
+.background {
+  background-image: url('/images/background.jpg');
+  background-size: contain; /* 画像を全体に表示する */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px; /* ヘッダー分の余白を追加 */
+  box-sizing: border-box; /* パディングを含めたボックスサイズを計算 */
+  background-size: 100% 100%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.8); /* 背景を半透明にする */
+  padding: 40px 20px; /* 上下のパディングを増やす */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 影を追加 */
+  width: 100%;
+  max-width: 400px;
+  text-align: center; /* フォーム全体を中央揃えにする */
+}
+
+.input {
+  margin-bottom: 10px;
+  padding: 12px; /* パディングを増やす */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px; /* フォントサイズを大きくする */
+  transition: border-color 0.3s; /* トランジションを追加 */
+  width: 100%; /* 入力欄を全幅にする */
+  max-width: 300px; /* 入力欄の最大幅を設定 */
+  margin: 0 auto; /* 入力欄を中央に配置 */
+}
+
+.input:focus {
+  border-color: #0070f3; /* フォーカス時のボーダーカラー */
+  outline: none; /* デフォルトのアウトラインを削除 */
+  box-shadow: 0 0 5px rgba(0, 112, 243, 0.5); /* フォーカス時の影を追加 */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center; /* 中央に配置 */
+  margin-top: 10px; /* 上部にマージンを追加 */
+}
+
+.button {
+  padding: 12px; /* パディングを増やす */
+  background-color: #00807a; 
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px; /* フォントサイズを大きくする */
+  transition: background-color 0.3s; /* トランジションを追加 */
+  width: 200px; /* 横に引き伸ばす */
+}
+
+.button:hover {
+  background-color: #003e5a; /* ホバー時の色を変更 */
+}
+
+.h1 {
+  font-family: 'AomemoFont'; /* フォントを統一 */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.inputContainer {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+}

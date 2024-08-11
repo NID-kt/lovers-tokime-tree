@@ -1,0 +1,117 @@
+.background {
+  display: flex;
+  flex-direction: column; /* 縦方向に配置 */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/images/background.jpg'); 
+  background-size: cover; /* 画像を全体に表示する */
+  background-position: center; /* 画像を中央に配置 */
+  background-repeat: no-repeat; /* 画像の繰り返しを防ぐ */
+  background-attachment: fixed; /* 背景画像を固定 */
+  padding: 20px;
+  padding-top: 100px; /* ヘッダー分の余白を追加 */
+  background-size: 100% 100%;
+}
+
+/* フォームのスタイル */
+.form {
+  background-color: rgba(255, 255, 255, 0.8); /* 背景を半透明にする */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* 見出しのスタイル */
+.h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* 設定項目のスタイル */
+.settingItem {
+  margin-top: 20px;
+}
+
+/* ラベルのスタイル */
+.settingItem label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* スライダーのスタイル */
+.settingItem input[type="range"] {
+  width: 100%;
+}
+
+/* アカウント削除ボタンのスタイル */
+.deleteButton {
+  
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.deleteButton:hover {
+  background-color: #ff1a1a;
+}
+
+/* ヘッダーのスタイル */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 32px;
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  font-family: 'AomemoFont';
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: gray;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  color: white;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: gray;
+}
+
+
+
+
+.fontAomemo {
+  font-family: 'AomemoFont', sans-serif;
+}

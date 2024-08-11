@@ -6,6 +6,7 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --brightness: 100%;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -17,6 +18,7 @@
 }
 
 body {
+  filter: brightness(var(--brightness));
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -30,4 +32,11 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+@font-face {
+  font-family: 'AomemoFont';
+  src: url('/public/fonts/AomemoFont-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
