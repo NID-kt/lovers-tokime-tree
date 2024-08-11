@@ -20,7 +20,7 @@ export const GET = auth(async (request) => {
             allowedContentTypes: ['image/jpeg', 'image/png', 'image/gif'],
           };
         },
-onUploadCompleted: () => {
+        onUploadCompleted: () => {
           return Promise.resolve();
         }
       });
