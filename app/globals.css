@@ -34,7 +34,7 @@ body {
 
 @font-face {
   font-family: 'AomemoFont';
-  src: url('/public/fonts/AomemoFont-Regular.otf') format('opentype');
+  src: url('/fonts/AomemoFont-Regular.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
 }
